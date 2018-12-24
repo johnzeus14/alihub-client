@@ -1,0 +1,20 @@
+{
+  "name": "alihub",
+  "short_name": "alihub",
+  "icons": [
+    {
+      "src": "./img/icons/alihubicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/icons/alihubicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#4DBA87"
+}
