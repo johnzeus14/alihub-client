@@ -32,7 +32,7 @@
 export default {
   data(){
     return{
-      brand:'Alihub',
+      brand:'Alihub.me',
     }
   }
 
@@ -46,21 +46,20 @@ export default {
 
 @breakpoint-small: 150px;
 
-@navbar-background:white;
-@navbar-nav-item-color: black;
-@navbar-item-color: black;
-@navbar-nav-item-active-color: black;
-@navbar-nav-item-hover-color:  black;
-@navbar-nav-item-onclick-color:  black;
-@navbar-toggle-color:  black;
-@navbar-toggle-hover-color: black;
+@navbar-background:linear-gradient(45deg,#F32F8E,#B236D0);
+@navbar-nav-item-color: white;
+@navbar-item-color: white;
+@navbar-nav-item-active-color: white;
+@navbar-nav-item-hover-color:  white;
+@navbar-nav-item-onclick-color:  white;
+@navbar-toggle-color:  white;
+@navbar-toggle-hover-color: white;
 @navbar-nav-item-padding-horizontal: 10px;
 @navbar-nav-item-font-size: auto;
 @navbar-nav-item-height: 70px;
 
-
-@logo-color:black;
-@logo-hover-color:black;
+@logo-color:white;
+@logo-hover-color:white;
 @logo-font-family:'Montserrat Alternates', sans-serif;
 @logo-font-size: auto;
 

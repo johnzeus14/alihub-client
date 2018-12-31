@@ -1,10 +1,10 @@
 <template>
   <div class="uk-container uk-margin-large-bottom tabs" >
   	<vk-tabs align="center">
-    <vk-tabs-item  icon = "list" title=""> <story-list> </story-list> </vk-tabs-item>
-    <vk-tabs-item icon = "camera" title=""> </vk-tabs-item>
-    <vk-tabs-item icon = "cart" title=""></vk-tabs-item>
-    <vk-tabs-item icon = "comment" title=""></vk-tabs-item>
+    <vk-tabs-item  icon = "list" title="Posts"> <story-list> </story-list> </vk-tabs-item>
+    <vk-tabs-item icon = "camera" title="Photos"> </vk-tabs-item>
+    <vk-tabs-item icon = "cart" title="Shop"></vk-tabs-item>
+    <vk-tabs-item icon = "comment" title="reviews"></vk-tabs-item>
   </vk-tabs>
   </div>
 </template>

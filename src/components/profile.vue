@@ -1,24 +1,27 @@
 <template>
-  <div id="profile">
-    <div class="uk-container uk-visible@sm">
+ <div class="uk-container uk-padding">
+    <vk-grid gutter="collapse" class="uk-child-width-expand@m uk-text-center" matched = "true">
+      <div id="profile-image">
+        <vk-card hover = "true">
+           <div slot="media-top">
+              <img src="/img/unsplash.jpg" height="200" />
+
+        </div>
+   </vk-card>
+      </div>
+      <div>
+        <vk-card class="uk-width-1-1@m" hover>
+          <vk-label slot="badge">verified</vk-label>
+          <vk-card-title>Alihub</vk-card-title>
+          <p>Top leading Business Network</p>
+        </vk-card>
+      </div>
       
-      <div class ="uk-flex  uk-padding">
-        <div class = "">
-          <img src="img/salesman.jpg" class="uk-border-circle" height="200" width="200"/>
+</vk-grid>
 
-        </div>
-        <div class="uk-margin-left">
-          
-          <article class="uk-article">
-              <h1 class="uk-article-title"> Alihub</h1>
-              
-          </article>
-        </div>
-    </div>
+ </div>
 
 
-    </div>
-  </div>
 </template>
 
 <script>
