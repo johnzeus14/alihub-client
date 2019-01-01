@@ -6,7 +6,7 @@ export default {
   },
 
   deletePost(data) {
-    return session.delete('http://127.0.0.1:8000/story + id', data});
+    return session.delete('http://127.0.0.1:8000/story/'+id, data});
   },
   
   readPost() {
@@ -14,7 +14,7 @@ export default {
   },
   updatePost(data) {
     return session.patch('http://127.0.0.1:8000/story + id', data);
-  }
+  },
 
 
 };

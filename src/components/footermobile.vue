@@ -1,23 +1,12 @@
 <template>
   <div class="nav">
-    <vk-navbar >
-      
-       <vk-navbar-nav slot="left"> 
-            
-              <svgicon icon="add-button" width="30" height="90" color="#FFFFFF"></svgicon>
-        </vk-navbar-nav>
+    <vk-navbar>
+  <vk-navbar-nav>
+    <vk-navbar-nav-item title="Active" active></vk-navbar-nav-item>
 
-        <vk-navbar-nav slot = center>
-        <vk-navbar-logo >{{brand}}</vk-navbar-logo>
-      </vk-navbar-nav>
-        <vk-navbar-nav slot = "right">
-              <svgicon icon="notification" width="30" height="90" color="#FFFFFF"></svgicon>
-            
-        </vk-navbar-nav>
-       
-       
-        
-    </vk-navbar>
+    <vk-navbar-nav-item title="Item"></vk-navbar-nav-item>
+  </vk-navbar-nav>
+</vk-navbar>
   </div>
 </template>
 
@@ -27,7 +16,7 @@
 export default {
   data(){
     return{
-      brand:'Alihub.me',
+  
     }
   }
 
@@ -60,13 +49,7 @@ export default {
 @logo-font-size: auto;
 
 
-.hook-navbar-container() {
-  padding-left:25px;
-  padding-right:25px;
-  margin-right: auto;
-  margin-left: auto;
 
-}
 
 
 </style>
