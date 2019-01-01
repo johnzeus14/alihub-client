@@ -13,10 +13,11 @@
             
         </vk-navbar-nav>
         <vk-navbar-nav slot = "right" >
-            <vk-navbar-nav-item icon="home" ></vk-navbar-nav-item>
-            <vk-navbar-nav-item icon="heart" ></vk-navbar-nav-item>
-             <vk-navbar-nav-item icon="user" ></vk-navbar-nav-item>
-              <svgicon icon="search" width="25" height="20" color="#FFFFFF"></svgicon>
+                
+           
+               <svgicon icon="home" width="30" height="70" color="#FFFFFF"></svgicon>
+              <svgicon icon="like" width="30" height="70" color="#FFFFFF"></svgicon>
+              <svgicon icon="user" width="30" height="70" color="#FFFFFF"></svgicon>
         </vk-navbar-nav>
         <vk-navbar-nav slot="right"> 
               <vk-button size="small">Small button</vk-button>

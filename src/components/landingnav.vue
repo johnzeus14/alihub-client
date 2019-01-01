@@ -1,14 +1,16 @@
 <template>
   <div class="nav">
-    <vk-sticky bottom>
+     <vk-navbar >
+      <vk-navbar-nav>
+        <vk-navbar-logo>{{brand}}</vk-navbar-logo>
+      </vk-navbar-nav>
 
-          <vk-navbar>
-            <vk-navbar-nav slot = "center">
-              <svgicon icon="add-button" width="30" height="80" padding = "30"color="#000000"></svgicon>
-              <svgicon icon="search" width="30" height="80" color="#000000"></svgicon>
-            </vk-navbar-nav>
-          </vk-navbar>
-    </vk-sticky>
+      <vk-navbar-nav slot="right"> 
+              <vk-button size="small">Get Started</vk-button>
+      </vk-navbar-nav>
+       
+        
+    </vk-navbar>
   </div>
 </template>
 

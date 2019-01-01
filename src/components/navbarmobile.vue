@@ -1,23 +1,27 @@
 <template>
   <div class="nav">
+
+    <vk-sticky top>
+        
     <vk-navbar >
       
        <vk-navbar-nav slot="left"> 
             
-              <svgicon icon="add-button" width="30" height="90" color="#FFFFFF"></svgicon>
+              <svgicon icon="compass" width="20" height="80" color="#FFFFFF"></svgicon>
         </vk-navbar-nav>
 
         <vk-navbar-nav slot = center>
         <vk-navbar-logo >{{brand}}</vk-navbar-logo>
       </vk-navbar-nav>
         <vk-navbar-nav slot = "right">
-              <svgicon icon="notification" width="30" height="90" color="#FFFFFF"></svgicon>
+              <svgicon icon="notification" width="20" height="80" color="#FFFFFF"></svgicon>
             
         </vk-navbar-nav>
        
        
         
     </vk-navbar>
+  </vk-sticky>
   </div>
 </template>
 

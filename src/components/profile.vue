@@ -11,7 +11,7 @@
       </div>
       <div>
         <vk-card class="uk-width-1-1@m" hover>
-          <vk-label slot="badge">verified</vk-label>
+          <svgicon icon="verified" width="15" height="40" color="#00000"></svgicon>
           <vk-card-title>Alihub</vk-card-title>
           <p>Top leading Business Network</p>
         </vk-card>
