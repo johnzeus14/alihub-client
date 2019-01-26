@@ -1,14 +1,14 @@
 import session from './session';
 
 export default {
-  login(username, password) {
-    return session.post('/auth/login/', { username, password });
+  login(email, password) {
+    return session.post('/auth/login/', { email, password });
   },
   logout() {
     return session.post('/auth/logout/', {});
   },
-  createAccount(username, password1, password2, email) {
-    return session.post('/registration/', { email,full_name ,password1, password2 });
+  createAccount(full_name, email, password) {
+    return session.post('account/registration/', { email, full_name ,email, password });
   },
   changeAccountPassword(password1, password2) {
     return session.post('/auth/password/change/', { password1, password2 });

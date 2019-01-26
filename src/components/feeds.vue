@@ -1,40 +1,8 @@
 <template>
  
-  <div>
+  <div class="uk-container">
   
-        <vk-navbar class = "navigation">
-      <vk-navbar-nav>
-        <vk-navbar-logo>{{brand}}</vk-navbar-logo>
-      </vk-navbar-nav>
-       <vk-navbar-nav slot = "center" class = "right">
-                
-           
-          <router-link to="/feed"><svgicon icon="compass" width="60" height="70" color="black"></svgicon></router-link>
-          <router-link to="/"><svgicon icon="like" width="60" height="70" color="black"></svgicon></router-link>
-          <router-link to="/"><svgicon icon="notification" width="60" height="70" color="black"></svgicon></router-link>
-         <router-link to="/profile"><svgicon icon="user" width="60" height="70" color="black"></svgicon></router-link>
-
-
-             
-        </vk-navbar-nav>
       
-
-        <vk-navbar-nav slot ="right">
-           <form action="javascript:void(0)">
-
-            <input class="uk-input uk-form-width-medium uk-margin-small-right uk-margin-small-left uk-visible@m" type="text" placeholder="search">
-            
-          
-          </form>
-            <vk-navbar-nav slot="right"> 
-              <vk-button size="medium"> Post</vk-button>
-        </vk-navbar-nav>
-            
-        </vk-navbar-nav>
-       
-       
-        
-    </vk-navbar>
 
 
 
@@ -63,44 +31,6 @@ export default {
 @import '../../node_modules/uikit/src/less/uikit.less';
 
 @breakpoint-small: 150px;
-// linear-gradient(45deg,#F32F8E,#B236D0);
-@navbar-background: white;
-@navbar-nav-item-color: black;
-@navbar-item-color: black;
-@navbar-nav-item-active-color: black;
-@navbar-nav-item-hover-color:  black;
-@navbar-nav-item-onclick-color:  black;
-@navbar-toggle-color:  black;
-@navbar-toggle-hover-color: black;
-@navbar-nav-item-padding-horizontal: 10px;
-@navbar-nav-item-font-size: auto;
-@navbar-nav-item-height: 70px;
-
-@logo-color:black;
-@logo-hover-color:black;
-@logo-font-family:'Montserrat Alternates', sans-serif;
-@logo-font-size: auto;
-
-
-.uk-navbar-center{
-  .uk-navbar-nav{
-    a{
-      svg{
-        padding-left:30px;
-
-
-      }
-    }
-  }
-}
-
-.hook-navbar-container() {
-  padding-left:70px;
-  padding-right:70px;
-  margin-right: auto;
-  margin-left: auto;
-
-}
 
 @form-height:                                  50px;
 @form-line-height:                              @form-height;
@@ -108,7 +38,7 @@ export default {
 @form-padding-vertical:                         4px;
 
 @form-background:                               @global-muted-background;
-@form-color:                                    black;
+@form-color:                                    @global-color;
 
 @form-focus-background:                         @global-muted-background;
 @form-focus-color:                              @global-color;
@@ -136,7 +66,7 @@ export default {
 @form-width-medium:                             300px;
 @form-width-large:                              500px;
 
-@form-select-padding-right:                     30px;
+@form-select-padding-right:                     20px;
 @form-select-icon-color:                        @global-color;
 @form-select-option-color:                      #444;
 @form-select-disabled-icon-color:               @global-muted-color;
@@ -312,7 +242,6 @@ export default {
     background: @form-background;
     color: @form-color;
     .hook-form;
-
 }
 
 /*
@@ -372,12 +301,7 @@ export default {
  */
 
 .uk-input::-ms-input-placeholder { color: @form-placeholder-color !important; }
-.uk-input::placeholder { 
-    color: grey; 
-    text-align: center;
-
-
-}
+.uk-input::placeholder { color: @form-placeholder-color; }
 
 .uk-textarea::-ms-input-placeholder { color: @form-placeholder-color !important; }
 .uk-textarea::placeholder { color: @form-placeholder-color; }
@@ -466,11 +390,7 @@ select.uk-form-width-xsmall { width: (@form-width-xsmall + 25px); }
 
 .uk-form-width-small { width: @form-width-small; }
 
-.uk-form-width-medium {
-    width: @form-width-medium; 
-
-
-    }
+.uk-form-width-medium { width: @form-width-medium; }
 
 .uk-form-width-large { width: @form-width-large; }
 

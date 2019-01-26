@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import store from './store/store'
+import store from './store/store';
 import './registerServiceWorker'
 
 
@@ -16,6 +16,11 @@ import VueAxios from 'vue-axios'
 import VueSVGIcon from 'vue-svgicon'
 import './custom-icons'
 
+// import SuiVue from 'semantic-ui-vue';
+import 'uikit/dist/js/uikit.js'
+
+
+// Vue.use(SuiVue)
 Vue.use(VueSVGIcon)
 
 Vue.use(VueAxios, axios)

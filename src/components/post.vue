@@ -1,29 +1,40 @@
-<template>
+<!-- <template>
   <div class="uk-container">
-    <vk-grid gutter="medium" class="uk-child-width-1-3@s uk-text-center">
-  <div>
-     <vk-card matched>
+  
+    <ul class="uk-list">
+    <li><vk-card >
       <div slot="media-top">
         <img src="/img/salesman.jpg" alt="">
       </div>
       
     </vk-card>
-  </div>
-  
-</vk-grid>
+  </li>
+   
+
+</ul>
   
   </div>
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+import { mapState} from 'vuex';
 
 
 export default {
-  computed:{
+  data(){
+    return{
+
+    }
+  },
+
+  method:mapGetters('auth', [
+    'isAuthenticated',
+  ]),
+
 
   }
 
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -36,3 +47,4 @@ export default {
 
 
 </style>
+ -->

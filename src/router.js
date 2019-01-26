@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import store from './store/store';
+import store from './store/store'
 import home from './components/home.vue'
 import navbar from './components/navbardesktop.vue'
+import feed from './components/feeds.vue'
+import profile from './components/profile.vue'
 
 
 const requireAuthenticated = (to, from, next) => {
@@ -42,6 +44,16 @@ export default new Router({
       path: '/',
       name: 'home',
       component: home
+    },
+     {
+      path: '/feed',
+      name: 'feed',
+      component: feed
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: profile
     },
     
     //   path: '/about',

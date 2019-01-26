@@ -1,23 +1,20 @@
 <template>
  <div class="uk-container uk-padding">
-    <vk-grid gutter="collapse" class="uk-child-width-expand@m uk-text-center" matched = "true">
-      <div id="profile-image">
-        <vk-card hover = "true">
-           <div slot="media-top">
-              <img src="/img/unsplash.jpg" height="200" />
+    <vk-grid gutter="collapse" class="" matched = "true">
+          <div id="profile-image">
+            
+               <div slot="media-top">
+                  <img src="/img/udem.jpg" height="150px"  width="150px" class="uk-border-circle" />
 
-        </div>
-   </vk-card>
-      </div>
-      <div>
-        <vk-card class="uk-width-1-1@m" hover>
-          <svgicon icon="correct" width="55" height="90" color="#00000"></svgicon>
-          <vk-card-title>Alihub</vk-card-title>
-          <p>Top leading Business Network</p>
-        </vk-card>
-      </div>
+            </div>
+          </div>
+          <div id="profile-detail">   
+           <h3> Alihub</h3>| <svgicon icon="correct" width="15" height="20" color="#00000"></svgicon>
+          </div>
       
 </vk-grid>
+
+    <tabs> </tabs>
 
  </div>
 
@@ -25,9 +22,15 @@
 </template>
 
 <script>
-
+ import tabs  from '@/components/tabs.vue';
 
 export default {
+
+
+ components:{
+
+  'tabs':tabs,
+},
   data(){
     return{
       brand:'Alihub',
@@ -46,7 +49,7 @@ export default {
 
 @global-margin: 150px;
 
-
+@base-body-background: red;
 
 
 
