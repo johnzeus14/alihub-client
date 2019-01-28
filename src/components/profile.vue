@@ -1,6 +1,6 @@
 <template>
  <div class="uk-container uk-padding">
-    <vk-grid gutter="collapse" class="" matched = "true">
+    <div uk-grid>
           <div id="profile-image">
             
                <div slot="media-top">
@@ -12,7 +12,11 @@
            <h3> Alihub</h3>| <svgicon icon="correct" width="15" height="20" color="#00000"></svgicon>
           </div>
       
-</vk-grid>
+</div>
+
+<div uk-lightbox>
+    <a href="./img/salesman.jpg"> helllp</a>
+</div>
 
     <tabs> </tabs>
 

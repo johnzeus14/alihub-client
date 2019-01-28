@@ -18,7 +18,7 @@ import './custom-icons'
 
 // import SuiVue from 'semantic-ui-vue';
 import 'uikit/dist/js/uikit.js'
-
+import './theme/theme.less'
 
 // Vue.use(SuiVue)
 Vue.use(VueSVGIcon)

@@ -34,9 +34,8 @@ computed: mapGetters('auth', [
 <style lang="less" scoped>
 
 
-@import '../node_modules/uikit/src/less/uikit.less';
-
 
 @breakpoint-large: 1200px;
+
 
 </style>
