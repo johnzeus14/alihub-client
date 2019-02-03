@@ -1,10 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import store from './store/store'
-import home from './components/home.vue'
-import navbar from './components/navbardesktop.vue'
-import feed from './components/feeds.vue'
-import profile from './components/profile.vue'
+
+
+
+
+// local app views
+import home from './views/home.vue'
+import feed from './views/feeds.vue'
+import profile from './views/profile.vue'
 
 
 const requireAuthenticated = (to, from, next) => {

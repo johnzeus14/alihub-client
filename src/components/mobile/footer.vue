@@ -37,7 +37,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
 
-@import '../../node_modules/uikit/src/less/uikit.less';
+@import '../../theme/theme.less';
 
 @breakpoint-small: 150px;
 

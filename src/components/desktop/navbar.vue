@@ -9,10 +9,10 @@
        <vk-navbar-nav slot = "center" class = "right">
                 
            
-          <router-link to="/feed"><svgicon icon="compass" width="60" height="70" color="white"></svgicon></router-link>
-          <router-link to="/"><svgicon icon="like" width="60" height="70" color="white"></svgicon></router-link>
-          <router-link to="/"><svgicon icon="notification" width="60" height="70" color="white"></svgicon></router-link>
-         <router-link to="/profile"><svgicon icon="user" width="60" height="70" color="white"></svgicon></router-link>
+          <router-link to="/feed"><svgicon icon="compass" width="50" height="70" color="white"></svgicon></router-link>
+          <router-link to="/"><svgicon icon="like" width="50" height="70" color="white"></svgicon></router-link>
+          <router-link to="/"><svgicon icon="notification" width="50" height="70" color="white"></svgicon></router-link>
+         <router-link to="/profile"><svgicon icon="user" width="50" height="70" color="white"></svgicon></router-link>
 
 
              

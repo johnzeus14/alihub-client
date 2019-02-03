@@ -16,30 +16,30 @@ export default {
     createCompleted: false,
     createError: false,
     createLoading: false,
-    post:[],
+    profile:[],
     
   },
   actions: {
-    createPost({ commit }, { user, content, media, created_at }) {
-      commit(CREATE_POST);
-      return auth.createPost(user, content, media, created_at)
+    createProfile({ commit }, { user, content, media, created_at }) {
+      commit(CREATE_SUCCESS);
+      return auth.createProfile(user, content, media, created_at)
         .then(() => commit(CREATE_SUCCESS))
         .catch(() => commit(CREATE_FAILURE));
     },
-    getPost({ commit }, { data }) {
-      commit(GET_POST);
-      return auth.readPost(key)
+    getProfile({ commit }, { data }) {
+      commit(GET_SUCCESS);
+      return auth.getprofile(data)
         .then(() => commit(GET_SUCCESS))
         .catch(() => commit(GET_FAILURE));
     },
-      deletePost({ commit }, { key }) {
-      commit(DELETE_POST);
+      deleteProfile({ commit }, { key }) {
+      commit(DELETE_SUCCESS);
       return auth.verifyAccountEmail(key)
         .then(() => commit(DELETE_SUCCESS))
         .catch(() => commit(DELETE_FAILURE));
     },
-      updatePost({ commit }, { key }) {
-      commit(UPDATE_POST);
+      updateProfile({ commit }, { key }) {
+      commit(UPDATE_PROFILE);
       return auth.verifyAccountEmail(key)
         .then(() => commit(UPDATE_SUCCESS))
         .catch(() => commit(UPDATE_FAILURE));
@@ -51,11 +51,13 @@ export default {
     [CREATE_FAILURE](state) {
       state.registrationError = true;
       state.registrationLoading = false;
+     
     },
     [CREATE_SUCCESS](state) {
       state.registrationCompleted = true;
       state.registrationError = false;
       state.registrationLoading = false;
+      state.profile = response.data();
     },
       [GET_SUCCESS](state) {
       state.activationLoading = true;

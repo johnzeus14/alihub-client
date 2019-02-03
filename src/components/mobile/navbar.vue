@@ -41,14 +41,14 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
 
-@import '../theme/theme.less';
+@import '../../theme/theme.less';
 
 
 
 
 .hook-navbar-container() {
-  padding-left:25px;
-  padding-right:25px;
+  padding-left:20px;
+  padding-right:20px;
   margin-right: auto;
   margin-left: auto;
 

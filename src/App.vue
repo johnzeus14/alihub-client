@@ -1,25 +1,32 @@
-<template>
+ho<template>
   <div id="app">
-   <navbar-d class = "uk-visible@l"> </navbar-d>
-   <navbar-m class= "uk-hidden@l"> </navbar-m>
+   <navbar-desktop class = "uk-visible@l"> </navbar-desktop>
+   <navbar-mobile class= "uk-hidden@l"> </navbar-mobile>
     <router-view/>
 
-    <footer-m class= "uk-hidden@l">  </footer-m>
+    <footer-mobile class= "uk-hidden@l">  </footer-mobile>
   </div>
 </template>
 
 
 <script >
-import navbardesktop  from '@/components/navbardesktop.vue';
-import navbarmobile from '@/components/navbarmobile.vue';
-import footermobile from '@/components/footermobile.vue';
+//navbar 
+import navbar_d  from '@/components/desktop/navbar.vue'
+import navbar_m from '@/components/mobile/navbar.vue'
+
+
+//footer
+import footer_m from '@/components/desktop/footer.vue'
+import footer_d from '@/components/mobile/footer.vue'
+
+//vuex imports
 import { mapGetters } from 'vuex';
 export default {
 
 components:{
-	'navbar-d':navbardesktop,
-	'navbar-m':navbarmobile,
-	'footer-m':footermobile
+	'navbar-desktop':navbar_d,
+	'navbar-mobile':navbar_m,
+	'footer-mobile':footer_m
 },
 computed: mapGetters('auth', [
     'isAuthenticated',
