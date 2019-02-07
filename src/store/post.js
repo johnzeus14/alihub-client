@@ -1,14 +1,12 @@
 import auth from '../api/post';
 
-import {
-  CREATE_POST,
-  UPDATE_POST,
-  DELETE_POST,
-  GET_POST,
-  CREATE_SUCCESS,
-  CREATE_FAILURE,
+import  {
+     POST_BEGIN, 
+     POST_CLEAR ,
+     POST_FAILURE ,
+     POST_SUCCESS 
   
-} from './types';
+  } from './types';
 
 export default {
   namespaced: true,
@@ -20,24 +18,31 @@ export default {
     
   },
   actions: {
+
     createPost({ commit }, { user, content, media, created_at }) {
       commit(CREATE_POST);
       return auth.createPost(user, content, media, created_at)
-        .then(() => commit(CREATE_SUCCESS))
-        .catch(() => commit(CREATE_FAILURE));
+        .then(() => commit(POST_SUCCESS))
+        .catch(() => commit(POST_FAILURE));
     },
+
+
     getPost({ commit }, { data }) {
       commit(GET_POST);
-      return auth.readPost(key)
+      return auth.readPost(data)
         .then(() => commit(GET_SUCCESS))
         .catch(() => commit(GET_FAILURE));
     },
-      deletePost({ commit }, { key }) {
+
+
+      deletePost({ commit }, { data }) {
       commit(DELETE_POST);
       return auth.verifyAccountEmail(key)
-        .then(() => commit(DELETE_SUCCESS))
+        .then(() => commit(POST_CLEAR))
         .catch(() => commit(DELETE_FAILURE));
     },
+
+
       updatePost({ commit }, { key }) {
       commit(UPDATE_POST);
       return auth.verifyAccountEmail(key)
@@ -45,6 +50,8 @@ export default {
         .catch(() => commit(UPDATE_FAILURE));
     },
   
+
+
   },
   mutations: {
   
@@ -57,8 +64,9 @@ export default {
       state.registrationError = false;
       state.registrationLoading = false;
     },
-      [GET_SUCCESS](state) {
+      [GET_SUCCESS](state, response) {
       state.activationLoading = true;
+      state.post  = response.data();
     },
     [GET_FAILURE](state) {
       state.activationLoading = true;

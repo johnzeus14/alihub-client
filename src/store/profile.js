@@ -1,12 +1,26 @@
-import auth from '../api/post';
+import auth from '../api/profile';
 
 import {
-  CREATE_POST,
-  UPDATE_POST,
-  DELETE_POST,
-  GET_POST,
-  CREATE_SUCCESS,
-  CREATE_FAILURE,
+  
+     PROFILE_CREATE_BEGIN ,
+     PROFILE_CREATE_SUCCESS,
+     PROFILE_CREATE_FAILURE , 
+
+     PROFILE_GET_BEGIN,  
+     PROFILE_GET_SUCCESS,
+     PROFILE_GET_FAILURE,
+
+     PROFILE_DELETE_BEGIN,
+     PROFILE_DELETE_SUCCESS,
+     PROFILE_DELETE_FAILURE,
+
+     PROFILE_UPDATE_BEGIN,
+     PROFILE_UPDATE_SUCCESS,
+     PROFILE_UPDATE_FAILURE
+
+
+
+
   
 } from './types';
 
@@ -21,71 +35,80 @@ export default {
   },
   actions: {
     createProfile({ commit }, { user, content, media, created_at }) {
-      commit(CREATE_SUCCESS);
-      return auth.createProfile(user, content, media, created_at)
-        .then(() => commit(CREATE_SUCCESS))
-        .catch(() => commit(CREATE_FAILURE));
+      commit(PROFILE_CREATE_BEGIN);
+      return profile.createProfile(user, content, media, created_at)
+        .then(() => commit(PROFILE_CREATE_SUCCESS))
+        .catch(() => commit(PROFILE_CREATE_FAILURE));
     },
     getProfile({ commit }, { data }) {
-      commit(GET_SUCCESS);
-      return auth.getprofile(data)
-        .then(() => commit(GET_SUCCESS))
-        .catch(() => commit(GET_FAILURE));
+      commit(PROFILE_GET_BEGIN);
+      return profile.getprofile(data)
+        .then(() => commit(PROFILE_GET_SUCCESS))
+        .catch(() => commit(PROFILE_GET_FAILURE));
     },
-      deleteProfile({ commit }, { key }) {
-      commit(DELETE_SUCCESS);
-      return auth.verifyAccountEmail(key)
-        .then(() => commit(DELETE_SUCCESS))
-        .catch(() => commit(DELETE_FAILURE));
+      deleteProfile({ commit }, { data }) {
+      commit(PROFILE_DELETE_BEGIN);
+      return profile.deleteprofile(data)
+        .then(() => commit(PROFILE_DELETE_SUCCESS))
+        .catch(() => commit(PROFILE_DELETE_FAILURE));
     },
-      updateProfile({ commit }, { key }) {
-      commit(UPDATE_PROFILE);
-      return auth.verifyAccountEmail(key)
-        .then(() => commit(UPDATE_SUCCESS))
-        .catch(() => commit(UPDATE_FAILURE));
+      updateProfile({ commit }, { data }) {
+      commit(PROFILE_UPDATE_BEGIN);
+      return profile.updateProfile(data)
+        .then(() => commit(PROFILE_UPDATE_SUCCESS))
+        .catch(() => commit(PROFILE_UPDATE_FAILURE));
     },
   
   },
   mutations: {
+     [PROFILE_CREATE_BEGIN](state) {
+      state.createLoading = true;
   
-    [CREATE_FAILURE](state) {
-      state.registrationError = true;
-      state.registrationLoading = false;
      
     },
-    [CREATE_SUCCESS](state) {
-      state.registrationCompleted = true;
-      state.registrationError = false;
-      state.registrationLoading = false;
-      state.profile = response.data();
+    [PROFILE_CREATE_FAILURE](state) {
+      state.createError = true;
+      state.createLoading = false;
+     
     },
-      [GET_SUCCESS](state) {
+    [PROFILE_CREATE_SUCCESS](state) {
+      state.createCompleted = true;
+      state.createnError = false;
+      state.createLoading = false;
+     
+    },
+      [PROFILE_GET_BEGIN](state) {
       state.activationLoading = true;
+      state.createLoading = true;
     },
-    [GET_FAILURE](state) {
+      [PROFILE_GET_SUCCESS](state) {
       state.activationLoading = true;
+       state.profile = response.data();
     },
-    [UPDATE_SUCCESS](state) {
-      state.activationCompleted = false;
-      state.activationError = false;
-      state.activationLoading = false;
+    [PROFILE_GET_FAILURE](state) {
+      state.createLoading = false;
+      state.createError = true;
     },
-    [UPDATE_FAILURE](state) {
-      state.activationCompleted = false;
+    [PROFILE_UPDATE_BEGIN](state) {
+      
+      state.createLoading = false;
+
+    },
+    [PROFILE_UPDATE_SUCCESS](state) {
+      state.createCompleted = true;
       state.activationError = false;
       state.activationLoading = false;
     },
     
-     [DELETE_SUCCESS](state) {
+     [PROFILE_UPDATE_FAILURE](state) {
       state.activationCompleted = false;
-      state.activationError = false;
+      state.createError = true;
       state.activationLoading = false;
     },
-    [DELETE_FAILURE](state) {
-      state.activationCompleted = false;
-      state.activationError = false;
-      state.activationLoading = false;
+    [PROFILE_DELETE_BEGIN](state){
+      state.createLoading = true;
     },
+   
     
   },
 };

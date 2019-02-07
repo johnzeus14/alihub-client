@@ -1,23 +1,32 @@
 <template>
- <div class="uk-container uk-padding-large">
-    <div uk-grid>
-          <div id="profile-image" class="uk-width-1-4">
+ <div class="uk-container">
+
+
+    <div class="uk-grid-match uk-padding" uk-grid>
+          <div id="profile-image" class="uk-width-1-4@l">
+
+            <div class="uk-card uk-card-body">
+                   
+                <img src="/img/udem.jpg" height="350px"  width="350px" class="uk-border-circle" />
+    
+            </div>
             
-                
-                <img src="/img/udem.jpg" height="150px"  width="150px" class="uk-border-circle" />
+               
           </div>
-          <div id="profile-username" class="uk-width-3-4">   
-           <h3> Alihub  <svgicon icon="correct" width="30" height="30" color="#00000"></svgicon></h3>
+     <!--    profile-cover -->
+          <div id="profile-cover" class="uk-width-3-4@l">   
+           <div class="uk-cover-container uk-height-medium" >
+               <img src="/img/unsplash.jpg" alt="" uk-cover >
+            </div>
           </div>
+
+       <!--  end of profile cover -->
           
 
 
       
 </div>
 
-<div uk-lightbox>
-    <a href="./img/udem.jpg"> helllp</a>
-</div>
 
     <tabs> </tabs>
 

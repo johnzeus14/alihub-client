@@ -10,6 +10,9 @@ export default {
    getProfile() {
     return session.get('/profile/', {});
   },
+  deleteProfile(){
+  	return session.get('profile', {data})
+  }
 
 
 };

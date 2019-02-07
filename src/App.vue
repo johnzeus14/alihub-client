@@ -42,7 +42,5 @@ computed: mapGetters('auth', [
 
 
 
-@breakpoint-large: 1200px;
-
 
 </style>

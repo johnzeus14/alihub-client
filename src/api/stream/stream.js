@@ -8,7 +8,7 @@ const BASE_URL: 'http://127.0.0.1:8000/';
 const session = axios.create({
   xsrfCookieName: CSRF_COOKIE_NAME,
   xsrfHeaderName: CSRF_HEADER_NAME,
-  baseURL: BASE_URL,
+  baseURL: BASE_URL
 });
 
 export default session;

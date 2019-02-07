@@ -7,14 +7,14 @@
       
        <vk-navbar-nav slot="left"> 
             
-              <svgicon icon="compass" width="20" height="80" color="#FFFFFF"></svgicon>
+              <svgicon icon="compass" width="18" height="90" color="#FFFFFF"></svgicon>
         </vk-navbar-nav>
 
         <vk-navbar-nav slot = center>
         <vk-navbar-logo >{{brand}}</vk-navbar-logo>
       </vk-navbar-nav>
         <vk-navbar-nav slot = "right">
-              <svgicon icon="notification" width="20" height="80" color="#FFFFFF"></svgicon>
+              <svgicon icon="notification" width="18" height="90" color="#FFFFFF"></svgicon>
             
         </vk-navbar-nav>
        
@@ -47,8 +47,8 @@ export default {
 
 
 .hook-navbar-container() {
-  padding-left:20px;
-  padding-right:20px;
+  padding-left:40px;
+  padding-right:40px;
   margin-right: auto;
   margin-left: auto;
 
