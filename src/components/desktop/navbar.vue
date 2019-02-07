@@ -1,44 +1,57 @@
 <template>
  
   <div>
-  
-        <vk-navbar class = "navigation">
-      <vk-navbar-nav>
-        <vk-navbar-logo>{{brand}}</vk-navbar-logo>
-      </vk-navbar-nav>
-       <vk-navbar-nav slot = "center" class = "right">
-                
-           
-          <router-link to="/feed"><svgicon icon="compass" width="52" height="90" color="white"></svgicon></router-link>
-          <router-link to="/"><svgicon icon="like" width="52" height="90" color="white"></svgicon></router-link>
-          <router-link to="/"><svgicon icon="notification" width="52" height="90" color="white"></svgicon></router-link>
-         <router-link to="/profile"><svgicon icon="user" width="52" height="90" color="white"></svgicon></router-link>
+    <nav class="uk-navbar-container uk-margin" uk-navbar>
+   
+
+        <div class="uk-navbar-left">
+          <div>
+            <a class="uk-navbar-item uk-logo" href="#">{{brand}}</a>
+        </div>
 
 
-             
-        </vk-navbar-nav>
+        <div class="uk-inline">
+        
+        <input class="uk-input">
+        <svgicon icon = "search" class = "uk-form-icon uk-form-icon-flip" height = "30" width = "30" color ="grey">   </svgicon>
+          </div>
+      </div>
+        
+        <div class="uk-navbar-center">
+          <div>
+            <ul class="uk-navbar-nav">
+                <li> <router-link to = "/"> Newsfeeds  </router-link></li>
+                 <li><router-link to ="/profile">  profile </router-link> </li>
+                  <li><a href="#">profile</a></li>
+            </ul>
+        </div>
+
+
+      </div>
+
+      <div class="uk-navbar-right">
+          <div>
+            
+
+          
+        <ul class="uk-navbar-nav">
+            <li><router-link to="/">  <svgicon icon = "notification" height="30" width = "19" color = "white">  </svgicon> </router-link> </li>
+            <li class="uk-active"><a href="#">Active</a></li>
+            <li class="uk-active"><a href="#">Active</a></li>
+            
+        </ul>
+
+        </div>
+
+    </div>
       
 
-        <vk-navbar-nav slot ="right">
-           <form action="javascript:void(0)">
-            <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
-
-            <input class="uk-input uk-form-width-medium uk-margin-small-right uk-margin-small-left uk-visible@m" type="text" placeholder="search">
-            
-          
-          </form>
-            <vk-navbar-nav slot="right"> 
-              <vk-button size="medium" > Post</vk-button>
-        </vk-navbar-nav>
-            
-        </vk-navbar-nav>
-       
-       
-        
-    </vk-navbar>
+</nav>
 
 
-
+   
+  
+  
   </div>
 </template>
 

@@ -28,7 +28,6 @@
 </div>
 
 
-    <tabs> </tabs>
 
  </div>
 
@@ -41,7 +40,7 @@ export default {
 
   data(){
     return{
-      brand:'Alihub',
+      
     }
   }
 

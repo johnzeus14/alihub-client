@@ -1,27 +1,50 @@
 <template>
   <div class="nav">
 
-    <vk-sticky top>
-        
-    <vk-navbar >
-      
-       <vk-navbar-nav slot="left"> 
-            
-              <svgicon icon="compass" width="18" height="90" color="#FFFFFF"></svgicon>
-        </vk-navbar-nav>
+     <nav class="uk-navbar-container"uk-navbar>
+   
 
-        <vk-navbar-nav slot = center>
-        <vk-navbar-logo >{{brand}}</vk-navbar-logo>
-      </vk-navbar-nav>
-        <vk-navbar-nav slot = "right">
-              <svgicon icon="notification" width="18" height="90" color="#FFFFFF"></svgicon>
-            
-        </vk-navbar-nav>
-       
-       
+        <div class="uk-navbar-left">
+         <div>
+          
+        <ul class="uk-navbar-nav">
+            <li><router-link to="/profile">  <svgicon icon = "chrome-logo" height="23" width = "30" color = "white">  </svgicon> </router-link> </li>
+           
+        </ul>
+
+        </div>
+
+      </div>
+
+
+    
         
-    </vk-navbar>
-  </vk-sticky>
+        <div class="uk-navbar-center">
+    
+        <div>
+            <a class="uk-navbar-item uk-logo" href="#">{{brand}}</a>
+        </div>
+
+    
+
+
+      </div>
+
+      <div class="uk-navbar-right">
+          <div>
+          
+        <ul class="uk-navbar-nav">
+            <li><router-link to="/">  <svgicon icon = "notification" height="23" width = "30" color = "white">  </svgicon> </router-link> </li>
+           
+        </ul>
+
+        </div>
+
+    </div>
+      
+
+</nav>
+
   </div>
 </template>
 
@@ -47,8 +70,8 @@ export default {
 
 
 .hook-navbar-container() {
-  padding-left:40px;
-  padding-right:40px;
+  padding-left:20px;
+  padding-right:20px;
   margin-right: auto;
   margin-left: auto;
 

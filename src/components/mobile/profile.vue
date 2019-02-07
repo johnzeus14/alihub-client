@@ -1,17 +1,14 @@
 <template>
  <div class="uk-container uk-padding-large">
-    <div uk-grid>
-          <div id="profile-image" class="uk-width-2-4@s">
+    <div>
+
+
+          <div id="profile-image" class="uk-card uk-card-body uk-width-auto uk-align-center">
             
                 
                 <img src="/img/udem.jpg" height="150px"  width="150px" class="uk-border-circle" />
           </div>
-          <div id="profile-username" class="uk-width-2-4@s">   
-           <h3> Alihub  <svgicon icon="correct" width="30" height="30" color="#00000"></svgicon></h3>
-          </div>
           
-
-
       
 </div>
 
