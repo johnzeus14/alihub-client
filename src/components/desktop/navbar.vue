@@ -13,7 +13,7 @@
         <div class="uk-inline">
         
         <input class="uk-input">
-        <svgicon icon = "search" class = "uk-form-icon uk-form-icon-flip" height = "30" width = "30" color ="grey">   </svgicon>
+        <svgicon icon = "search" class = "uk-form-icon uk-form-icon-flip uk-padding-top" height = "20" width = "30" color ="grey">   </svgicon>
           </div>
       </div>
         
@@ -36,8 +36,8 @@
           
         <ul class="uk-navbar-nav">
             <li><router-link to="/">  <svgicon icon = "notification" height="30" width = "19" color = "white">  </svgicon> </router-link> </li>
-            <li class="uk-active"><a href="#">Active</a></li>
-            <li class="uk-active"><a href="#">Active</a></li>
+            <li class="uk-active"><router-link to="/profile"> <img src="/img/udem.jpg" height="5opx" width="50px" class="uk-border-circle"> </router-link></li>
+            
             
         </ul>
 

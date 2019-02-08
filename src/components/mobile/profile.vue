@@ -3,10 +3,10 @@
     <div>
 
 
-          <div id="profile-image" class="uk-card uk-card-body uk-width-auto uk-align-center">
+          <div id="profile-image" class="uk-card-default uk-card-body uk-width-auto uk-align-center">
             
                 
-                <img src="/img/udem.jpg" height="150px"  width="150px" class="uk-border-circle" />
+                <img src="/img/udem.jpg" height="150px"  width="150px" class="uk-border-circle uk-align-center" />
           </div>
           
       

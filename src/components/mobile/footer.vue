@@ -1,23 +1,51 @@
 <template>
-  <div class="nav">
+  <div class="footer">
 
-    <vk-sticky bottom>
+    
+     <nav class="uk-navbar-container"uk-navbar>
+   
+
+        <div class="uk-navbar-left">
+         <div>
+          
+        <ul class="uk-navbar-nav">
+            <li><router-link to="/profile">  <svgicon icon = "chrome-logo" height="23" width = "30" color = "white">  </svgicon> </router-link> </li>
+           
+        </ul>
+
+        </div>
+
+      </div>
+
+
+    
         
-    <vk-navbar >
+        <div class="uk-navbar-center">
+    
+        <div>
+            <a class="uk-navbar-item uk-logo" href="#">{{brand}}</a>
+        </div>
+
+    
+
+
+      </div>
+
+      <div class="uk-navbar-right">
+          <div>
+          
+        <ul class="uk-navbar-nav">
+            <li><router-link to="/">  <svgicon icon = "notification" height="23" width = "30" color = "white">  </svgicon> </router-link> </li>
+           
+        </ul>
+
+        </div>
+
+    </div>
       
 
-        <vk-navbar-nav slot = center>
-         <router-link><svgicon icon="notification" width="30" height="80" color="black"></svgicon></router-link>
-            <router-link> <svgicon icon="compass" width="30" height="80" color="black"></svgicon></router-link>
-            
-  
-      </vk-navbar-nav>
-       
-       
-       
-        
-    </vk-navbar>
-  </vk-sticky>
+</nav>
+    
   </div>
 </template>
 

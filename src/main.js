@@ -5,10 +5,6 @@ import store from './store/store';
 import './registerServiceWorker'
 
 
-import Vuikit from 'vuikit'
-import '@vuikit/theme'
-import VuikitIcons from '@vuikit/icons'
-
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 
@@ -23,15 +19,7 @@ import './theme/theme.less'
 // Vue.use(SuiVue)
 Vue.use(VueSVGIcon)
 
-Vue.use(VueAxios, axios)
-Vue.use(Vuikit)
-Vue.use(VuikitIcons)
 
-
-
-
- 
-Vue.use(VueAxios, axios);
 
 Vue.config.productionTip = false
 
