@@ -1,4 +1,4 @@
-import auth from '../api/profile';
+import auth from '../../api/backend/profile';
 
 import {
   
@@ -34,9 +34,9 @@ export default {
     
   },
   actions: {
-    createProfile({ commit }, { user, content, media, created_at }) {
+    createProfile({ commit }, { username, avatar, category, created_at }) {
       commit(PROFILE_CREATE_BEGIN);
-      return profile.createProfile(user, content, media, created_at)
+      return profile.createProfile(username, avatar, category, created_at)
         .then(() => commit(PROFILE_CREATE_SUCCESS))
         .catch(() => commit(PROFILE_CREATE_FAILURE));
     },
@@ -46,13 +46,13 @@ export default {
         .then(() => commit(PROFILE_GET_SUCCESS))
         .catch(() => commit(PROFILE_GET_FAILURE));
     },
-      deleteProfile({ commit }, { data }) {
+    deleteProfile({ commit }, { data }) {
       commit(PROFILE_DELETE_BEGIN);
       return profile.deleteprofile(data)
         .then(() => commit(PROFILE_DELETE_SUCCESS))
         .catch(() => commit(PROFILE_DELETE_FAILURE));
     },
-      updateProfile({ commit }, { data }) {
+    updateProfile({ commit }, { data }) {
       commit(PROFILE_UPDATE_BEGIN);
       return profile.updateProfile(data)
         .then(() => commit(PROFILE_UPDATE_SUCCESS))
@@ -73,7 +73,7 @@ export default {
     },
     [PROFILE_CREATE_SUCCESS](state) {
       state.createCompleted = true;
-      state.createnError = false;
+      state.createError = false;
       state.createLoading = false;
      
     },

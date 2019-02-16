@@ -2,21 +2,26 @@
  <div class="uk-container">
 
 
-    <div class="uk-grid-match uk-padding" uk-grid>
+    <div class="uk-grid-match uk-padding-small" uk-grid>
+
+     <!--  the profile image -->
           <div id="profile-image" class="uk-width-1-4@l">
 
             <div class="uk-card-default uk-card-body">
-                   
-                <img src="/img/udem.jpg" height="200px"  width="200px" class="uk-border-circle uk-align-center" />
-    
+
+        
+                 <img src="/img/udem.jpg" height="200px"  width="200px" class="uk-border-circle uk-align-center" />
+     
             </div>
             
                
           </div>
+
+        <!--   end of profile image -->
      <!--    profile-cover -->
-          <div id="profile-cover" class="uk-width-3-4@l uk-border-rounded">   
+          <div id="profile-cover" class="uk-width-3-4@l uk-border-circle">   
            <div class="uk-cover-container uk-height-medium" >
-               <img src="/img/unsplash.jpg" alt="" uk-cover >
+               <img src="/img/unsplash.jpg" alt="" uk-cover  >
             </div>
           </div>
 

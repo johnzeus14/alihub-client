@@ -38,6 +38,7 @@ const redirectLogout = (to, from, next) => {
     .then(() => next('/login'));
 };
 
+
 Vue.use(Router)
 
 export default new Router({

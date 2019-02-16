@@ -1,4 +1,4 @@
-ho<template>
+<template>
   <div id="app">
    <navbar-desktop class = "uk-visible@l"> </navbar-desktop>
    <navbar-mobile class= "uk-hidden@l"> </navbar-mobile>
@@ -26,11 +26,9 @@ export default {
 components:{
 	'navbar-desktop':navbar_d,
 	'navbar-mobile':navbar_m,
-	'footer-mobile':footer_m
+	'footer-mobile':footer_m,
 },
-computed: mapGetters('auth', [
-    'isAuthenticated',
-  ]),
+
 
 }
 

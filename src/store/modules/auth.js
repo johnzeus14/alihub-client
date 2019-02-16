@@ -1,5 +1,5 @@
-import auth from '../api/auth/auth.js';
-import session from '../api/session/session.js';
+import auth from '../../api/backend/auth.js';
+import session from '../../api/backend/session.js';
 import {
   LOGIN_BEGIN,
   LOGIN_FAILURE,
