@@ -6,7 +6,10 @@
 
         <div class="uk-navbar-left">
           <div>
-            <a class="uk-navbar-item uk-logo" href="#">{{brand}}</a>
+            <a class="uk-navbar-item uk-logo" href="#">
+
+             <img src="/img/icons/alihubicon.png" alt="" height="25px" width="29px">|{{brand}}
+          </a>
         </div>
 
 
@@ -27,7 +30,7 @@
 
               <a href="">
                <div>
-                        <svgicon icon = "notification" height="20" width="19" color = "white">  </svgicon>
+                        <svgicon icon = "notification" height="20" width="19" color = "#000000">  </svgicon>
                         <div class="uk-navbar-subtitle">feeds</div>
                     </div>
                 </a>
@@ -37,8 +40,8 @@
 
                   <a href="">
                <div>
-                        <svgicon icon = "notification" height="20" width="19" color = "white">  </svgicon>
-                        <div class="uk-navbar-subtitle">notification</div>
+                        <svgicon icon = "compasses" height="20" width="19" color = "#000000">  </svgicon>
+                        <div class="uk-navbar-subtitle">discover</div>
                     </div>
                 </a>
 
@@ -48,13 +51,13 @@
                     
                     <a href="">
                <div>
-                        <svgicon icon = "notification" height="20" width="19" color = "white">  </svgicon>
+                        <svgicon icon = "notification" height="20" width="19" color = "#000000">  </svgicon>
                         <div class="uk-navbar-subtitle">notification</div>
                     </div>
                 </a>
 
                   </li>
-            <li><router-link to="/">  <svgicon icon = "notification" height="30" width = "19" color = "white">  </svgicon> </router-link>
+            <li><router-link to="/">  <svgicon icon = "notification" height="30" width = "19" color = "#000000">  </svgicon> </router-link>
 
              </li>
             <li class="uk-active"><router-link to="/profile"> <img src="/img/udem.jpg" height="5opx" width="50px" class="uk-border-circle"> </router-link></li>
